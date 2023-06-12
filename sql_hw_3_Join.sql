@@ -28,3 +28,4 @@ select e.employee_name "Rabotnik" , r.role_name "Dolzhnost" from roles_employee 
 -- Вывести имена и должность только Python разработчиков.
 select * from employees e join roles_employee re on (e.id = re.employee_id) join roles r on (re.role_id = r.id) where lower (role_name) like '%python%' ;
 
+
