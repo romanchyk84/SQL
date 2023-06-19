@@ -10,7 +10,7 @@ select e.id, e.employee_name , s.monthly_salary  from employees e join employee_
 -- Вывести всех работников у которых ЗП меньше 2000.
 select e.id, e.employee_name , s.monthly_salary  from employees e join employee_salary es on (e.id = es.employee_id) join salary s on (es.salary_id = s.id) where monthly_salary < 2000 ;
 
--- Вывести все зарплатные позиции, но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
+-- Вывести все зарплатные позиции, но работник по ним не назначен.
 select es.employee_id , e.employee_name , s.monthly_salary  from employee_salary es 
 join salary s on s.id = es.salary_id 
 left join employees e on e.id = es.employee_id 
